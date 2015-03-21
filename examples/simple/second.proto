@@ -11,4 +11,3 @@ message ThirdMessage {
     option (nanopb_msgopt).msgid = 4711;
    required bool hope = 1;
 }
-
