@@ -7,3 +7,8 @@ message SecondMessage {
    required bool lucky_punch = 1;
 }
 
+message ThirdMessage {
+    option (nanopb_msgopt).msgid = 4711;
+   required bool hope = 1;
+}
+
