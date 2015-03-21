@@ -15,7 +15,7 @@ CSRC += $(NANOPB_DIR)/pb_common.c  # The nanopb common parts
 
 PROTOC_OPTS += -I$(NANOPB_DIR)/generator/proto/ -I.
 # Build rule for the main program
-simple: $(CSRC)
+simple: $(CSRC) simple.pb.h second.pb.h
 	$(CC) $(CFLAGS) -osimple $(CSRC)
 
 # Build rule for the protocol
