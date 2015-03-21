@@ -1,6 +1,8 @@
 # Include the nanopb provided Makefile rules
 include ../../extra/nanopb.mk
 
+all: 	simple expanded.c
+
 # Compiler flags to enable all warnings & debug info
 CFLAGS = -Wall -Werror -g -O0
 CFLAGS += -I$(NANOPB_DIR)
@@ -25,4 +27,8 @@ simple.pb.c: simple.proto
 
 second.pb.c: second.proto
 	$(PROTOC) $(PROTOC_OPTS) --nanopb_out=. second.proto
+
+expanded.c: mapping.c simple.pb.h second.pb.h
+	gcc -E -I../.. mapping.c >expanded.c
+
 

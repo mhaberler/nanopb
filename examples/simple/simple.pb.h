@@ -47,7 +47,7 @@ extern const pb_field_t DuplicatedMessage_fields[2];
 #define PB_MSG_1234 SimpleMessage
 #define PB_MSG_5678 DuplicatedMessage
 
-#define SIMPLE_MESSAGES PB_MSG(1234) PB_MSG(5678)
+#define SIMPLE_MESSAGES PB_MSG(1234,SimpleMessage) PB_MSG(5678,DuplicatedMessage)
 #endif
 
 #ifdef __cplusplus
