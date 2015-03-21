@@ -2,8 +2,8 @@
 // one message.
 import "nanopb.proto";
 
-message SimpleMessage {
-   option (nanopb_msgopt).msgid = 1234;
-   required int32 lucky_number = 1;
+message SecondMessage {
+   option (nanopb_msgopt).msgid = 5678;
+   required bool lucky_punch = 1;
 }
 
