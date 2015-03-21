@@ -43,6 +43,13 @@ extern const pb_field_t DuplicatedMessage_fields[2];
 #define SimpleMessage_size                       11
 #define DuplicatedMessage_size                   11
 
+#ifdef PB_MSGID
+#define PB_MSG_1234 SimpleMessage
+#define PB_MSG_5678 DuplicatedMessage
+
+#define SIMPLE_MESSAGES PB_MSG(1234) PB_MSG(5678)
+#endif
+
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
