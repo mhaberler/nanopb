@@ -31,4 +31,5 @@ second.pb.c: second.proto
 expanded.c: mapping.c simple.pb.h second.pb.h
 	gcc -E -I../.. mapping.c >expanded.c
 
-
+clean:
+	rm -rf simple.pb.h second.pb.h simple.pb.c second.pb.c expanded.c
