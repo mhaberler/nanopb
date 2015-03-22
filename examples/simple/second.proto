@@ -1,0 +1,13 @@
+// A very simple protocol definition, consisting of only
+// one message.
+import "nanopb.proto";
+
+message SecondMessage {
+   option (nanopb_msgopt).msgid = 3456;
+   required bool lucky_punch = 1;
+}
+
+message ThirdMessage {
+    option (nanopb_msgopt).msgid = 4711;
+   required bool hope = 1;
+}

@@ -1,7 +1,15 @@
 // A very simple protocol definition, consisting of only
 // one message.
+import "nanopb.proto";
+
 
 message SimpleMessage {
-    required int32 lucky_number = 1;
+   option (nanopb_msgopt).msgid = 1234;
+   required int32 lucky_number = 1;
+}
+
+message DuplicatedMessage {
+    option (nanopb_msgopt).msgid = 5678;
+    required int32 serial = 1;
 }
 
