@@ -57,8 +57,8 @@ message NanoPBOptions {
   // Generate oneof fields as normal optional fields instead of union.
   optional bool no_unions = 8 [default = false];
 
-  // integer tag for a message
-    optional uint32 msgid = 9;
+  // integer type tag for a message
+  optional uint32 msgid = 9;
 }
 
 // Extensions to protoc 'Descriptor' type in order to define options

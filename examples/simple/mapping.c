@@ -14,14 +14,16 @@ typedef struct {
 	    # name,						\
 	    sizeof(PB_MSG_ ## id),				\
 	    name ## _fields,					\
-	    NULL						\
+	    NULL,						\
 	    },
+
 #define PB_MSGINFO_DELIMITER {0, NULL, 0, NULL, NULL}
 
 #define PB_MSGID 1
 
 #include "simple.pb.h"
 #include "second.pb.h"
+
 
 
 msginfo_t msgs[] = {
@@ -40,5 +42,5 @@ msginfo_t msgs[] = {
     { 4711, "ThirdMessage", sizeof(ThirdMessage), ThirdMessage_fields, ((void *)0) },
     { 0, ((void *)0), 0, ((void *)0), ((void *)0)}
 };
-
 #endif
+

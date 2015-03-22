@@ -3,7 +3,7 @@
 import "nanopb.proto";
 
 message SecondMessage {
-   option (nanopb_msgopt).msgid = 8192;
+   option (nanopb_msgopt).msgid = 3456;
    required bool lucky_punch = 1;
 }
 

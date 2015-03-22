@@ -1339,7 +1339,7 @@ typedef struct {
     const pb_field_t *fields;
     void *user;
 } msginfo_t;
-# 23 "mapping.c"
+# 24 "mapping.c"
 # 1 "simple.pb.h" 1
 # 18 "simple.pb.h"
 typedef struct _DuplicatedMessage {
@@ -1352,7 +1352,7 @@ typedef struct _SimpleMessage {
 # 39 "simple.pb.h"
 extern const pb_field_t SimpleMessage_fields[2];
 extern const pb_field_t DuplicatedMessage_fields[2];
-# 24 "mapping.c" 2
+# 25 "mapping.c" 2
 # 1 "second.pb.h" 1
 # 18 "second.pb.h"
 typedef struct _SecondMessage {
@@ -1365,11 +1365,12 @@ typedef struct _ThirdMessage {
 # 39 "second.pb.h"
 extern const pb_field_t SecondMessage_fields[2];
 extern const pb_field_t ThirdMessage_fields[2];
-# 25 "mapping.c" 2
+# 26 "mapping.c" 2
+
 
 
 msginfo_t msgs[] = {
-  { 1234, "SimpleMessage", sizeof(SimpleMessage), SimpleMessage_fields, ((void *)0) }, { 5678, "DuplicatedMessage", sizeof(DuplicatedMessage), DuplicatedMessage_fields, ((void *)0) },
-  { 8192, "SecondMessage", sizeof(SecondMessage), SecondMessage_fields, ((void *)0) }, { 4711, "ThirdMessage", sizeof(ThirdMessage), ThirdMessage_fields, ((void *)0) },
-  {-1, ((void *)0), 0, ((void *)0), ((void *)0)}
+  { 1234, "SimpleMessage", sizeof(SimpleMessage), SimpleMessage_fields, ((void *)0), }, { 5678, "DuplicatedMessage", sizeof(DuplicatedMessage), DuplicatedMessage_fields, ((void *)0), },
+  { 3456, "SecondMessage", sizeof(SecondMessage), SecondMessage_fields, ((void *)0), }, { 4711, "ThirdMessage", sizeof(ThirdMessage), ThirdMessage_fields, ((void *)0), },
+  {0, ((void *)0), 0, ((void *)0), ((void *)0)}
 };
